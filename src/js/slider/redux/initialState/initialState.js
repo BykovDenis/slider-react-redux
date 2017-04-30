@@ -1,0 +1,40 @@
+/**
+ * Created by Denis on 18.04.2017.
+ */
+const initialState = {
+  slide1: {
+    url: '/themes/owm/assets/img/mainpage_slide1.jpg',
+    url_1200: '/themes/owm/assets/img/mainpage_slide1_1200.jpg',
+    url_992: '/themes/owm/assets/img/mainpage_slide1_992.jpg',
+    url_768: '/themes/owm/assets/img/mainpage_slide1_768.jpg',
+    url_370: '/themes/owm/assets/img/mainpage_slide1_370.jpg',
+    name: 'layer1',
+    title: 'Vane Platform',
+    description: 'Simple and fast access to environmental data for development of new applications',
+    link: '/vaneLanguage'
+  },
+  slide2: {
+    url: '/themes/owm/assets/img/mainpage_slide2.jpg',
+    url_1200: '/themes/owm/assets/img/mainpage_slide2_1200.jpg',
+    url_992: '/themes/owm/assets/img/mainpage_slide2_992.jpg',
+    url_768: '/themes/owm/assets/img/mainpage_slide2_768.jpg',
+    url_370: '/themes/owm/assets/img/mainpage_slide2_370.jpg',
+    name: 'layer2',
+    title: 'VANE Language',
+    description: 'SQL fashioned query language for easy and fast ‘speaking’ with satellite images and weather data',
+    link: '/vaneLanguage'
+  },
+  slide3: {
+    url: '/themes/owm/assets/img/mainpage_slide3.jpg',
+    url_1200: '/themes/owm/assets/img/mainpage_slide3_1200.jpg',
+    url_992: '/themes/owm/assets/img/mainpage_slide3_992.jpg',
+    url_768: '/themes/owm/assets/img/mainpage_slide3_768.jpg',
+    url_370: '/themes/owm/assets/img/mainpage_slide3_370.jpg',
+    name: 'layer3',
+    title: 'Operations with images',
+    description: 'Online processing of images with essential formulas of vegetation indexes such as NDVI and EVI',
+    link: '/vaneLanguage'
+  }
+};
+
+export default initialState;

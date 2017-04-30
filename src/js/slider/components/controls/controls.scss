@@ -1,0 +1,39 @@
+@import '../../../../scss/variables';
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  bottom: 15px !important;
+  left: 50%;
+  transform: translateX(-26%);
+  width: 140px;
+  padding-left: 0;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.radio{
+  display: none;
+}
+.radio + .control:before{
+  display:block;
+  content: '';
+  width: 14px;
+  height: 14px;
+  border: 3px solid $color-white;
+  border-radius: 50%;
+  margin-right: 13px;
+  cursor: pointer;
+}
+.radio:checked + .control:before{
+  display:block;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: $color-white;
+  border:none;
+  border-radius: 50%;
+  cursor: pointer;
+}

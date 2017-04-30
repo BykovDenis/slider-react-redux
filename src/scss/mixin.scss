@@ -1,0 +1,10 @@
+@mixin layout{
+  max-width: 1130px;
+  margin: 0 auto;
+}
+
+@mixin clearfix {
+  display: table;
+  clear: both;
+  content: '';
+}

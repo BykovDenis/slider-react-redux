@@ -1,0 +1,28 @@
+@import './normalize';
+@import './mixin';
+@import "./variables";
+@import './fonts';
+
+body{
+  width: 100%;
+  min-width: 370px;
+  margin: 0 auto;
+}
+
+.fake{
+  background-image: url(../img/mainpage_slide1.jpg);
+  background-image: url(../img/mainpage_slide1_1200.jpg);
+  background-image: url(../img/mainpage_slide1_992.jpg);
+  background-image: url(../img/mainpage_slide1_768.jpg);
+  background-image: url(../img/mainpage_slide1_370.jpg);
+  background-image: url(../img/mainpage_slide2.jpg);
+  background-image: url(../img/mainpage_slide2_1200.jpg);
+  background-image: url(../img/mainpage_slide2_992.jpg);
+  background-image: url(../img/mainpage_slide2_768.jpg);
+  background-image: url(../img/mainpage_slide2_370.jpg);
+  background-image: url(../img/mainpage_slide3.jpg);
+  background-image: url(../img/mainpage_slide3_1200.jpg);
+  background-image: url(../img/mainpage_slide3_992.jpg);
+  background-image: url(../img/mainpage_slide3_768.jpg);
+  background-image: url(../img/mainpage_slide3_370.jpg);
+}
