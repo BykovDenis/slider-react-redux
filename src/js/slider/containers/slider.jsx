@@ -28,16 +28,15 @@ class Slider extends Component {
     this.props.getDataSlider();
   }
   componentDidMount() {
-    this.interval = setInterval(this.autoChangeSlide, 100000);
+    this.interval = setInterval(this.autoChangeSlide, 3000);
   }
-
   /**
    * Метод смены слайдов по клику
    * @param e
    */
   changeSlide(e) {
     clearInterval(this.interval);
-    this.interval = setInterval(this.autoChangeSlide, 100000);
+    this.interval = setInterval(this.autoChangeSlide, 3000);
     this.setState({
       curSlide: serviceSlider.getNumSlideByName(this.props.currentStore.sliderReducer, e.target.id)
     });
