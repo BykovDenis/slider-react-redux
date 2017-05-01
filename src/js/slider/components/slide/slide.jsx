@@ -4,10 +4,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Slide = ({ slideData }) => {
+const Slide = ({ slideData, visible }) => {
   const styles = require('./slide.scss');
   return (
-    <div className={styles.slide}>
+    <div className={styles.slide} style={{ display: visible ? 'block' : 'none' }}>
       <a href="http://owm.io" className={styles.link}>
         <picture>
           <source media="(max-width: 370px)" srcSet={slideData.url_370} />
@@ -32,7 +32,8 @@ const Slide = ({ slideData }) => {
 };
 
 Slide.propTypes = {
-  slideData: PropTypes.shape.isRequired
+  slideData: PropTypes.shape.isRequired,
+  visible: PropTypes.bool.isRequired
 };
 
 export default Slide;

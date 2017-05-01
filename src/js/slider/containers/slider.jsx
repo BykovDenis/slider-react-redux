@@ -28,7 +28,7 @@ class Slider extends Component {
     this.props.getDataSlider();
   }
   componentDidMount() {
-    this.interval = setInterval(this.autoChangeSlide, 3000);
+    this.interval = setInterval(this.autoChangeSlide, 100000);
   }
 
   /**
@@ -37,7 +37,7 @@ class Slider extends Component {
    */
   changeSlide(e) {
     clearInterval(this.interval);
-    this.interval = setInterval(this.autoChangeSlide, 3000);
+    this.interval = setInterval(this.autoChangeSlide, 100000);
     this.setState({
       curSlide: serviceSlider.getNumSlideByName(this.props.currentStore.sliderReducer, e.target.id)
     });
@@ -55,13 +55,18 @@ class Slider extends Component {
   }
   render() {
     const styles = require('./slider.scss');
+    this.slides = Object.keys(this.props.currentStore.sliderReducer).map((elem, index) => {
+      console.log(this.state.curSlide);
+      const domElement = (<Slide
+        slideData={this.props.currentStore.sliderReducer[elem]}
+        visible={this.state.curSlide === index}
+        key={elem}
+      />);
+      return domElement;
+    });
     return (
       <div className={styles['main-slider']}>
-        <Slide
-          slideData={
-            serviceSlider.getSlideById(this.props.currentStore.sliderReducer, this.state.curSlide)
-          }
-        />
+        {this.slides}
         <Controls
           changeSlide={this.changeSlide}
           active={this.state.curSlide}
