@@ -28,11 +28,13 @@ const responseDataSlider = (data = initialState, dispatch) => {
 };
 
 const responseDataWeather = (data = initialState, dispatch) => {
-  const date = new schema.Entity('dt');
-  const myScheme = { dates: [date] };
+  const myData = data.list;
+  // const myData = [{ id: '123', name: 'Jim' }, { id: '456', name: 'Jane' }];
+  const myScheme = new schema.Entity('dates', {}, { idAttribute: 'dt' });
+  const userDateSchema = [myScheme];
   dispatch({
     type: constants.GET_WEATHER_DATA,
-    payload: { weatherData: normalize({ dates: data.list }, myScheme) }
+    payload: { weatherData: normalize(myData, userDateSchema) }
   });
 };
 
