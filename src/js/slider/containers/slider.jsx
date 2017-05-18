@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 // модуль комбинирования работы нескольких актшионов
 import { bindActionCreators } from 'redux';
-import getActionDataSlider from '../redux/actions/slider';
+import * as getActionDataSlider from '../redux/actions/slider';
 // Подключаем модуль с сервисом получения и обработки данных сладеров
 import * as serviceSlider from '../services/service-slider';
 // Подключаем дочерние компоненты
@@ -25,7 +25,8 @@ class Slider extends Component {
     this.autoChangeSlide = this.autoChangeSlide.bind(this);
   }
   componentWillMount() {
-    this.props.getDataSlider();
+    this.props.getDataSlider.getActionDataSlider();
+    this.props.getDataSlider.getWeatherData();
   }
   componentDidMount() {
     this.interval = setInterval(this.autoChangeSlide, 3000);

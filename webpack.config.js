@@ -78,6 +78,9 @@ reactTransform[1].transforms.push({
 });
 
 module.exports = {
+  devServer: {
+    port: port
+  },
   context: __dirname + '/src/',
   entry: {
     mainpage_slider: './js/slider',

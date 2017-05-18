@@ -9,5 +9,8 @@ export default function sliderReducer(state = initialState, action) {
   if (action.type === constants.GET_SLIDER_DATA && params) {
     return Object.assign({}, state, params);
   }
+  if (action.type === constants.GET_WEATHER_DATA && params) {
+    return Object.assign({}, state, params);
+  }
   return state;
 }
