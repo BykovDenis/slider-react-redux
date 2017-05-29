@@ -9,6 +9,7 @@ import * as serviceSlider from '../services/service-slider';
 // Подключаем дочерние компоненты
 import Slide from '../components/slide/slide';
 import Controls from '../components/controls/controls';
+import ReSelect from '../components/reselect/reselect';
 
 class Slider extends Component {
   static get propTypes() {
@@ -71,6 +72,7 @@ class Slider extends Component {
           active={this.state.curSlide}
           arrControls={serviceSlider.getSliderControls(this.props.currentStore.sliderReducer)}
         />
+        <ReSelect />
       </div>
     );
   }
